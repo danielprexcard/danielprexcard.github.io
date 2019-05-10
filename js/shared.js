@@ -1,6 +1,6 @@
-var APP_ID = '1028645180580861'; //Facebook APP ID
+var APP_ID = '2190828681230306'; //Facebook APP ID
 var LIMIT = 100; //Number of records to bring back at any time - MAX 100
-var BASEURL = 'https://www.sorendam.com/tableau/facebook/'; //base url of virtual directory
+var BASEURL = 'https://danielprexcard.github.io/'; //base url of virtual directory
 
 /**
  * 1. login with Facebook
