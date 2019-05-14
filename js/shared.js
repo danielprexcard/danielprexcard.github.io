@@ -165,7 +165,7 @@ function getData() {
                 tableau.connectionData = JSON.stringify(pageInfoComplete); // set pageInfo as the connection data so we can get to it when we fetch the data
                 tableau.submit();
             } catch(e) {
-                document.getElementById("message").innerHTML = "This app use is for Tableau Desktop only";
+                document.getElementById("no_tableau").innerHTML = "This app use is for Tableau Desktop only";
                 clearInterval(intervalID);
             }
         }
