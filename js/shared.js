@@ -166,7 +166,7 @@ function getData() {
                 tableau.submit();
             } catch(e) {
                 document.getElementById("no_tableau").style = "color:red"
-                document.getElementById("no_tableau").innerHTML = "This app use is for Tableau Desktop only";
+                document.getElementById("no_tableau").innerHTML = "Page insights can only be display on Tableau Desktop";
                 clearInterval(intervalID);
             }
         }
