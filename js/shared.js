@@ -157,7 +157,7 @@ function getData() {
         });
     }
     // as there can be multiple pages selected wait for all and repeat this until all have given a response
-    if (page_ids.length) {
+    if (pageInfoComplete.length) {
         var intervalID = setInterval(function(){
             if(pageInfoComplete.length == page_ids.length) {
                 // this code clears your interval (myInterval)
