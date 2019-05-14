@@ -157,15 +157,18 @@ function getData() {
         });
     }
     // as there can be multiple pages selected wait for all and repeat this until all have given a response
-    if (pageInfoComplete.length) {
-        var intervalID = setInterval(function(){
-            if(pageInfoComplete.length == page_ids.length) {
-                // this code clears your interval (myInterval)
+    var intervalID = setInterval(function(){
+        if(pageInfoComplete.length == page_ids.length) {
+            // this code clears your interval (myInterval)
+            try {
                 tableau.connectionName = CONNECTION_NAME; // name the data source. This will be the data source name in Tableau
                 tableau.connectionData = JSON.stringify(pageInfoComplete); // set pageInfo as the connection data so we can get to it when we fetch the data
                 tableau.submit();
+            } catch(e) {
+                document.getElementById("message").innerHTML = "This app use is for Tableau Desktop only";
+                clearInterval(intervalID);
             }
-        }, 500);
-    }
+        }
+    }, 500);
 }
 
